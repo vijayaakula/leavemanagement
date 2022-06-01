@@ -1,4 +1,5 @@
 <?php
+//ajax calls
 include('db.php');
 if(isset($_POST['action'])&&($_POST['action']=='edit_grp_name'))
 {
@@ -6,6 +7,7 @@ if(isset($_POST['action'])&&($_POST['action']=='edit_grp_name'))
     $sel="SELECT *from employee where id=$id_num";
     $que=mysqli_query($conn,$sel);
     $rows=mysqli_fetch_assoc($que);
+
     $data['id']=$rows['id'];
     $data['username']=$rows['username'];
     $data['email']=$rows['email'];
